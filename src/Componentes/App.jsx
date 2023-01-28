@@ -1,11 +1,11 @@
 import {Navbar} from './Navbar/Navbar'
+import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 
 export const App = () => {
-  const valor = "esto es una variable"
   return (
-    <div className="App" style={{"backgroundColor" : "#777"}}>
-      {/* <Navbar nombre="La biblioteca del abuelo"/> */}
-      <Navbar/>
+    <div className="App">
+      <Navbar cantidad={5}/>
+      <ItemListContainer greeting="Mensaje"/>
     </div>
   );
 }

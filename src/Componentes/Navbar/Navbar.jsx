@@ -1,39 +1,32 @@
 import React from 'react';
+import { CartWidget } from '../CartWidget/CartWidget';
+import { Categorias } from './Categorias/Categorias'
+import { Secciones } from './Secciones/Secciones';
+import { Search } from './Search/Search';
 
-export const Navbar = ({ nombre }) => {
+export const Navbar = ({ cantidad }) => {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-light">
-                <div className="container-fluid">
+                <div className="container-fluid d-flex">
+
+                    {/* Cosas para que funcione el responsive */}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
+
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        {/* Agregación de los distintos elementos del navbar */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active px-lg-3" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li className="nav-item dropdown px-lg-3">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Categorias
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Autoayuda</a></li>
-                                    <li><a className="dropdown-item" href="#">Ciencia Ficcion</a></li>
-                                    <li><a className="dropdown-item" href="#">Fabulas</a></li>
-                                    <li><a className="dropdown-item" href="#">Infantiles</a></li>
-                                    <li><a className="dropdown-item" href="#">Novelas</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item ">
-                                <a className="nav-link" href="./carrito.html"><i className="fa-solid fa-cart-shopping" /></a>
-                            </li>
+                            <Secciones />
+                            <Categorias />
+                            <Search />
                         </ul>
 
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
+                        {/* Agregación del carrito */}
+                        <CartWidget cantidad={cantidad} />
+
                     </div>
                 </div>
             </nav>
