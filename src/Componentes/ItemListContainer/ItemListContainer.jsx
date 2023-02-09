@@ -10,24 +10,30 @@ export const ItemListContainer = () => {
     const { idCategoria } = useParams()
     const [productos, setProductos] = useState([])
     console.log(idCategoria)
-    useEffect(() => {
-        if (idCategoria) {
-            consultarBDD('https://api.itbook.store/1.0/new').then(Libros => {
-                console.log(Libros.books)
-                const totalLibros = Libros.books.filter(lib => lib.subtitle === idCategoria)
-                console.log(idCategoria)
-                setProductos(totalLibros.books)
-            })
 
+    const getLibro = () =>{
+        consultarBDD('https://api.itbook.store/1.0/new').then(totalLibros => {
+            setProductos(totalLibros.books)
+        })
+    }
+    const getLibroByCat = (idCategoria) => {
+        consultarBDD('https://api.itbook.store/1.0/new').then((totalLibros) => {
+            const filtrados= totalLibros.books.filter(li => li.subtitle === idCategoria)
+            setProductos(filtrados)
+        })
+    }
+
+    useEffect(() => {
+
+        if(idCategoria){
+            getLibroByCat(idCategoria)
         } else {
-            consultarBDD('https://api.itbook.store/1.0/new').then(totalLibros => {
-                setProductos(totalLibros.books)
-            })
+            getLibro()
         }
-}, [])
+}, [idCategoria])
 
 return (
-    <div className='row cardLibros'>
+    <div className='row cardsLibro'>
         <ItemList totalLibros={productos} />
     </div>
 );
