@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Categorias = () => {
+
     return (
 
         <li className="nav-item dropdown px-lg-2">
@@ -10,9 +11,11 @@ export const Categorias = () => {
             </a>
 
             <ul className="dropdown-menu">
-                <li><Link className='dropdown-item' to={'/category/1'}>Software</Link></li>
-                <li><Link className='dropdown-item' to={'/category/2'}>Python</Link></li>
-                <li><Link className='dropdown-item' to={'/category/3'}>Data & Memory</Link></li>
+                <li><Link className='dropdown-item' to={'/category/data'}>Data</Link></li>
+                <li><Link className='dropdown-item' to={'/category/machine lerning'}>Machine Lerning</Link></li>
+                <li><Link className='dropdown-item' to={'/category/data'}>Data & Memory</Link></li>
+                <li><Link className='dropdown-item' to={'/category/Developing'}>Developing</Link></li>
+                <li><Link className='dropdown-item' to={'/category/game'}>Game</Link></li>
             </ul>
         </li>
 

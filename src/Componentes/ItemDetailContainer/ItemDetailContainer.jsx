@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
 
     const getLibro = (id) => {
         consultarBDD('../json/libros.json').then((totalLibros) => {
-            const filtrados= totalLibros.books.find(li => li.isbn13 === id)
+            const filtrados= totalLibros.find(li => li.isbn13 === id)
             setProducto(filtrados)
         })
     }
