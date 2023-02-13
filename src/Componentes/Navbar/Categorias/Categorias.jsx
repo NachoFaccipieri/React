@@ -10,11 +10,9 @@ export const Categorias = () => {
             </a>
 
             <ul className="dropdown-menu">
-                <li><Link className='dropdown-item' to={'/category/Write comprehensive test plans to uncover critical bugs in web, desktop, and mobile apps'}>Software</Link></li>
-                <li><Link className='dropdown-item' to={'/category/Data Wrangling with pandas, NumPy, and Jupyter'}>Python</Link></li>
-                <li><Link className='dropdown-item' to={'/category/Architecting, Designing, and Deploying on the Snowflake Data Cloud'}>Data & Memory</Link></li>
-                <li><a className="dropdown-item" href="#">Infantiles</a></li>
-                <li><a className="dropdown-item" href="#">Novelas</a></li>
+                <li><Link className='dropdown-item' to={'/category/1'}>Software</Link></li>
+                <li><Link className='dropdown-item' to={'/category/2'}>Python</Link></li>
+                <li><Link className='dropdown-item' to={'/category/3'}>Data & Memory</Link></li>
             </ul>
         </li>
 

@@ -7,5 +7,5 @@ export const ItemList = ({totalLibros}) => {
         <>
             {totalLibros.map(libro => <Item LIBRO={libro} key={libro.isbn13}/>)}
         </>
-    );
+    )
 }

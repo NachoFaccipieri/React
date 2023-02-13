@@ -21,7 +21,7 @@ export const App = () => {
           <Route path='/category/:idCategoria' element={<ItemListContainer/>}/>
           <Route path='/Item/:id' element={<ItemDetailContainer/>}/>
         </Routes>
-      </BrowserRouter>      
+      </BrowserRouter>
     </div>
   ) 
 }

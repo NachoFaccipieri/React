@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
     const {id} = useParams()
 
     const getLibro = (id) => {
-        consultarBDD('https://api.itbook.store/1.0/new').then((totalLibros) => {
+        consultarBDD('../json/libros.json').then((totalLibros) => {
             const filtrados= totalLibros.books.find(li => li.isbn13 === id)
             setProducto(filtrados)
         })
