@@ -1,11 +1,19 @@
 import React from 'react';
 import { Item } from '../Item/Item';
+import { ItemCart } from '../ItemCart/ItemCart';
 
-export const ItemList = ({totalLibros}) => {
-    
+export const ItemList = ({ totalLibros, plantilla }) => {
+
     return (
         <>
-            {totalLibros.map(libro => <Item LIBRO={libro} key={libro.isbn13}/>)}
+            {
+                plantilla === "Item"
+                    ?
+                    totalLibros.map(libro => <Item LIBRO={libro} key={libro.isbn13} />)
+                    :
+                    totalLibros.map(libro => <ItemCart LIBRO={libro} key={libro.isbn13} />)
+            }
+
         </>
     )
 }

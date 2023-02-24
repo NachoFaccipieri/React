@@ -26,6 +26,19 @@
     border-radius: 3px;
 }
 
+.contForm{
+    margin-top: 20px;
+}
+
+.cartContainer{
+    margin-top: 3%;
+    margin-left: 26,5%;
+}
+
+.cardCart{
+    max-width: 640px;
+}
+
 @media screen and (max-width: 767px) {
     .card {
 

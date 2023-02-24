@@ -12,17 +12,17 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-
-
         if (idCategoria) {
             console.log(idCategoria)
             consultarBDD('../json/libros.json').then(libros => {
                 const totalLibros = libros.filter(prod => prod.category.nombre === (idCategoria))
-                setProductos(totalLibros)
+                const items = <ItemList totalLibros={totalLibros} plantilla="Item"/>
+                setProductos(items)
             })
         } else {
             consultarBDD('./json/libros.json').then(totalLibros => {
-                setProductos(totalLibros)
+                const items = <ItemList totalLibros={totalLibros} plantilla="Item"/>
+                setProductos(items)
             })
         }
 
