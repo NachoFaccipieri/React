@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ItemList } from '../ItemList/ItemList';
 
 export const Cart = () => {
 
@@ -7,6 +8,7 @@ export const Cart = () => {
         {
             "title": "Data Visualization with Python and JavaScript, 2nd Edition",
             "subtitle": "Scrape, Clean, Explore, and Transform Your Data",
+            "cant": 4,
             "category": {
                 "id": 1,
                 "nombre": "data"
@@ -19,6 +21,7 @@ export const Cart = () => {
         {
             "title": "Learning Microsoft Power BI",
             "subtitle": "Transforming Data into Insights",
+            "cant": 2,
             "category": {
                 "id": 2,
                 "nombre": "machine lerning"
@@ -43,7 +46,7 @@ export const Cart = () => {
                     </>
                     :
                     <div className='container cartContainer'>
-                        <h2>Hay productos</h2>
+                        <ItemList totalLibros={carrito} plantilla="itemCart"/>
                     </div>
             }
         </>

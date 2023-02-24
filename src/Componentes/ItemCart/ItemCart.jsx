@@ -4,7 +4,7 @@ export const ItemCart = ({ item }) => {
     return (
         <div className='card mb-3 cardCart'>
             <div className="img-wrapper">
-                <img src={item.image} className="card-img-bottom" alt={`Imagen de ${item.nombre}`} />
+                <img src={item.image} className="card-img-bottom img-fluid rounded-start" alt={`Imagen de ${item.nombre}`} />
             </div>
             <div className="card-body">.
                 <h5 className="card-title">{item.title}</h5>
@@ -16,5 +16,3 @@ export const ItemCart = ({ item }) => {
         </div>
     );
 }
-
-

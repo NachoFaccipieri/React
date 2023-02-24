@@ -11,7 +11,7 @@ export const ItemList = ({ totalLibros, plantilla }) => {
                     ?
                     totalLibros.map(libro => <Item LIBRO={libro} key={libro.isbn13} />)
                     :
-                    totalLibros.map(libro => <ItemCart LIBRO={libro} key={libro.isbn13} />)
+                    totalLibros.map(libro => <ItemCart item={libro} key={libro.isbn13} />)
             }
 
         </>

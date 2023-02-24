@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
 
     return (
         <div className='row cardsLibro'>
-            <ItemList totalLibros={productos} />
+            {productos}
         </div>
     );
 }
