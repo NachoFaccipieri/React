@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { ItemList } from '../ItemList/ItemList';
 
 export const Cart = () => {
@@ -14,7 +15,7 @@ export const Cart = () => {
                 "nombre": "data"
             },
             "isbn13": "9781098111878",
-            "price": "$60.99",
+            "price": 60.99,
             "image": "https://itbook.store/img/books/9781098111878.png",
             "url": "https://itbook.store/books/9781098111878"
         },
@@ -27,7 +28,7 @@ export const Cart = () => {
                 "nombre": "machine lerning"
             },
             "isbn13": "9781098112844",
-            "price": "$36.99",
+            "price": 36.99,
             "image": "https://itbook.store/img/books/9781098112844.png",
             "url": "https://itbook.store/books/9781098112844"
         },
@@ -46,7 +47,14 @@ export const Cart = () => {
                     </>
                     :
                     <div className='container cartContainer'>
-                        <ItemList totalLibros={carrito} plantilla="itemCart"/>
+                        <ItemList totalLibros={carrito} plantilla="itemCart" />
+
+                        <div className="divButtons">
+                            <p>Resumen de la compra: Precio total</p>
+                            <button className='btn btn-danger' onClick={() => console.log("asd")}>Vaciar Carrito</button>
+                            <Link className="nav-link" to={"/"}><button className="btn btn-outline-success">Continuar comprando</button></Link>
+                            <Link className="nav-link" to={"/checkout"}><button className="btn btn-dark">Finalizar Compra</button></Link>
+                        </div>
                     </div>
             }
         </>

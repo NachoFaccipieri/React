@@ -7,7 +7,7 @@
             "nombre":"data"
         },   
         "isbn13": "9781098103828",
-        "price": "$53.95",
+        "price": 53.95,
         "image": "https://itbook.store/img/books/9781098103828.png",
         "url": "https://itbook.store/books/9781098103828"
     },
@@ -19,7 +19,7 @@
             "nombre": "data"
         }, 
         "isbn13": "9781098104030",
-        "price": "$37.49",
+        "price": 37.49,
         "image": "https://itbook.store/img/books/9781098104030.png",
         "url": "https://itbook.store/books/9781098104030"
     },
@@ -31,7 +31,7 @@
             "nombre": "machine lerning"
         },
         "isbn13": "9781098106225",
-        "price": "$43.99",
+        "price": 43.99,
         "image": "https://itbook.store/img/books/9781098106225.png",
         "url": "https://itbook.store/books/9781098106225"
     },
@@ -43,7 +43,7 @@
             "nombre": "data"
         },
         "isbn13": "9781098111878",
-        "price": "$60.99",
+        "price": 60.99,
         "image": "https://itbook.store/img/books/9781098111878.png",
         "url": "https://itbook.store/books/9781098111878"
     },
@@ -55,7 +55,7 @@
             "nombre": "machine lerning"
         },
         "isbn13": "9781098112844",
-        "price": "$36.99",
+        "price": 36.99,
         "image": "https://itbook.store/img/books/9781098112844.png",
         "url": "https://itbook.store/books/9781098112844"
     },
@@ -67,7 +67,7 @@
             "nombre": "Software"
         },
         "isbn13": "9781098113162",
-        "price": "$43.99",
+        "price": 43.99,
         "image": "https://itbook.store/img/books/9781098113162.png",
         "url": "https://itbook.store/books/9781098113162"
     },
@@ -79,7 +79,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781098116743",
-        "price": "$36.99",
+        "price": 36.99,
         "image": "https://itbook.store/img/books/9781098116743.png",
         "url": "https://itbook.store/books/9781098116743"
     },
@@ -91,7 +91,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781098119515",
-        "price": "$59.99",
+        "price": 59.99,
         "image": "https://itbook.store/img/books/9781098119515.png",
         "url": "https://itbook.store/books/9781098119515"
     },
@@ -103,7 +103,7 @@
             "nombre": "data"
         },
         "isbn13": "9781098121228",
-        "price": "$68.59",
+        "price": 68.59,
         "image": "https://itbook.store/img/books/9781098121228.png",
         "url": "https://itbook.store/books/9781098121228"
     },
@@ -115,7 +115,7 @@
             "nombre": "Software"
         },
         "isbn13": "9781098130923",
-        "price": "$36.99",
+        "price": 36.99,
         "image": "https://itbook.store/img/books/9781098130923.png",
         "url": "https://itbook.store/books/9781098130923"
     },
@@ -127,7 +127,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781642002263",
-        "price": "$0.00",
+        "price": 0.00,
         "image": "https://itbook.store/img/books/9781642002263.png",
         "url": "https://itbook.store/books/9781642002263"
     },
@@ -139,7 +139,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781800562738",
-        "price": "$39.99",
+        "price": 39.99,
         "image": "https://itbook.store/img/books/9781800562738.png",
         "url": "https://itbook.store/books/9781800562738"
     },
@@ -151,7 +151,7 @@
             "nombre": "game"
         },
         "isbn13": "9781801077330",
-        "price": "$49.99",
+        "price": 49.99,
         "image": "https://itbook.store/img/books/9781801077330.png",
         "url": "https://itbook.store/books/9781801077330"
     },
@@ -163,7 +163,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781801810999",
-        "price": "$32.99",
+        "price": 32.99,
         "image": "https://itbook.store/img/books/9781801810999.png",
         "url": "https://itbook.store/books/9781801810999"
     },
@@ -175,7 +175,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781801811132",
-        "price": "$39.99",
+        "price": 39.99,
         "image": "https://itbook.store/img/books/9781801811132.png",
         "url": "https://itbook.store/books/9781801811132"
     },
@@ -187,7 +187,7 @@
             "nombre": "data"
         },
         "isbn13": "9781801812856",
-        "price": "$34.99",
+        "price": 34.99,
         "image": "https://itbook.store/img/books/9781801812856.png",
         "url": "https://itbook.store/books/9781801812856"
     },
@@ -199,7 +199,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781803242002",
-        "price": "$44.99",
+        "price": 44.99,
         "image": "https://itbook.store/img/books/9781803242002.png",
         "url": "https://itbook.store/books/9781803242002"
     },
@@ -211,7 +211,7 @@
             "nombre": "Software"
         },
         "isbn13": "9781804612569",
-        "price": "$44.99",
+        "price": 44.99,
         "image": "https://itbook.store/img/books/9781804612569.png",
         "url": "https://itbook.store/books/9781804612569"
     },
@@ -223,7 +223,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781804617007",
-        "price": "$35.99",
+        "price": 35.99,
         "image": "https://itbook.store/img/books/9781804617007.png",
         "url": "https://itbook.store/books/9781804617007"
     },
@@ -235,7 +235,7 @@
             "nombre": "Developing"
         },
         "isbn13": "9781804618295",
-        "price": "$34.99",
+        "price": 34.99,
         "image": "https://itbook.store/img/books/9781804618295.png",
         "url": "https://itbook.store/books/9781804618295"
     }
