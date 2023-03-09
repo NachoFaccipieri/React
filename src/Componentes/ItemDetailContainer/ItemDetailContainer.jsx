@@ -1,29 +1,36 @@
 import React from 'react';
 
-import { consultarBDD } from '../../utils/funciones';
-import { ItemDetail } from '../ItemDetail/ItemDetail';
-
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-export const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState([])
-    const {id} = useParams()
+import { getProducto } from '../../utils/firebase';
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 
-    const getLibro = (id) => {
-        consultarBDD('../json/libros.json').then((totalLibros) => {
-            const filtrados= totalLibros.find(li => li.isbn13 === id)
-            setProducto(filtrados)
-        })
-    }
+
+export const ItemDetailContainer = () => {
+
+    const { id } = useParams()
+    const [producto, setProducto] = useState([])
+
+
+    // const getLibro = (id) => {
+    //     getProducto(id).then((totalLibros) => {
+    //         setProducto(totalLibros)
+    //     })
+    // }
 
     useEffect(() => {
-        getLibro(id)
+        
+        getProducto(id).then(prod => {
+            
+            setProducto(prod);
+        })
+        // getLibro(id)
     }, [])
 
     return (
         <div className='mb-3 cardsDetail'>
-            <ItemDetail LIBRO={producto}/>
+            <ItemDetail LIBRO={producto} />
         </div>
     );
 }

@@ -3,7 +3,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import { consultarBDD } from '../../utils/funciones';
+
+import { getProductos } from '../../utils/firebase';
 import { ItemList } from '../ItemList/ItemList';
 
 export const ItemListContainer = () => {
@@ -13,15 +14,15 @@ export const ItemListContainer = () => {
 
     useEffect(() => {
         if (idCategoria) {
-            console.log(idCategoria)
-            consultarBDD('../json/libros.json').then(libros => {
-                const totalLibros = libros.filter(prod => prod.category.nombre === (idCategoria))
-                const items = <ItemList totalLibros={totalLibros} plantilla="Item"/>
+            getProductos().then(libros => {
+                const totalLibros = libros.filter(prod => prod.stock > 0).filter(prod => prod.nombre === (idCategoria))
+                const items = <ItemList totalLibros={totalLibros} plantilla="Item" />
                 setProductos(items)
             })
         } else {
-            consultarBDD('./json/libros.json').then(totalLibros => {
-                const items = <ItemList totalLibros={totalLibros} plantilla="Item"/>
+            getProductos().then(libros => {
+                const totalLibros = libros.filter(prod => prod.stock > 0)
+                const items = <ItemList totalLibros={totalLibros} plantilla="Item" />
                 setProductos(items)
             })
         }
@@ -30,6 +31,7 @@ export const ItemListContainer = () => {
 
     return (
         <div className='row cardsLibro'>
+            <h1 className='titulo text-center'>La biblioteca del Abuelo</h1>
             {productos}
         </div>
     );

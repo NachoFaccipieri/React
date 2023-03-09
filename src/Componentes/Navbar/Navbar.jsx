@@ -2,9 +2,8 @@ import React from 'react';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Categorias } from './Categorias/Categorias'
 import { Secciones } from './Secciones/Secciones';
-import { Search } from './Search/Search';
 
-export const Navbar = ({ cantidad }) => {
+export const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-light">
@@ -15,17 +14,17 @@ export const Navbar = ({ cantidad }) => {
                         <span className="navbar-toggler-icon" />
                     </button>
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse fixed-top navBar" id="navbarSupportedContent">
 
                         {/* Agregación de los distintos elementos del navbar */}
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav me-auto ">
                             <Secciones />
                             <Categorias />
-                            <Search />
+                            
                         </ul>
 
                         {/* Agregación del carrito */}
-                        <CartWidget cantidad={cantidad} />
+                        <CartWidget />
 
                     </div>
                 </div>

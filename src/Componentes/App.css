@@ -1,3 +1,7 @@
+.navBar{
+    background-color: orangered
+}
+
 .cardsLibro,
 .cardDetail {
     align-items: center;
@@ -10,10 +14,64 @@
     max-height: 100%;
 }
 
+.btnCart:hover{
+    color:white;
+    background-color: black;
+}
+
+.titulo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: orange;
+    text-shadow: 3px 5px black;
+    padding-top: 4rem;
+}
+
+.divButtons{
+    display: flex;
+}
+
+
+.btnFinalizar{
+    background-color: green;
+}
+
+.resumen{
+    font-size: x-large;
+    font-weight: bold;
+    color: orange;
+    text-shadow: 1px 2px black;
+}
+
+.priceCart{
+    color: rosybrown;
+    text-shadow: 1px 1px black;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.icono{
+    color: black;
+}
+
+.cantCarrito{
+    color: black;
+    font-size: large;
+    
+}
+
+.cardLibro:hover{
+    transform: scale(1.1);
+}
+
 .cardDetail {
+    align-items: center;
+    margin-top: 5rem;
+    justify-content: center;
     display: flex;
     width: 100%;
 }
+
 
 .priceDetail {
     text-align: center;
@@ -26,7 +84,7 @@
 }
 
 .contForm{
-    margin-top: 20px;
+    margin-top: 5em;
 }
 
 .cartContainer{
@@ -35,7 +93,21 @@
 }
 
 .cardCart{
+    margin: 1em;
+    display: flex;
     max-width: 450px;
+}
+
+.btnVerProducto{
+    background-color: orangered;
+    color: black
+    
+}
+
+
+.btnVerProducto:hover{
+    color: black;
+    background-color: orange;
 }
 
 @media screen and (max-width: 767px) {

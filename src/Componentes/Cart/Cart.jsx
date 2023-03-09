@@ -2,37 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ItemList } from '../ItemList/ItemList';
+import { useCarritoContext } from '../../context/CarritoContext';
 
 export const Cart = () => {
-
-    const carrito = [
-        {
-            "title": "Data Visualization with Python and JavaScript, 2nd Edition",
-            "subtitle": "Scrape, Clean, Explore, and Transform Your Data",
-            "cant": 4,
-            "category": {
-                "id": 1,
-                "nombre": "data"
-            },
-            "isbn13": "9781098111878",
-            "price": 60.99,
-            "image": "https://itbook.store/img/books/9781098111878.png",
-            "url": "https://itbook.store/books/9781098111878"
-        },
-        {
-            "title": "Learning Microsoft Power BI",
-            "subtitle": "Transforming Data into Insights",
-            "cant": 2,
-            "category": {
-                "id": 2,
-                "nombre": "machine lerning"
-            },
-            "isbn13": "9781098112844",
-            "price": 36.99,
-            "image": "https://itbook.store/img/books/9781098112844.png",
-            "url": "https://itbook.store/books/9781098112844"
-        },
-    ]
+    const {carrito, emptyCart, totalPrice} = useCarritoContext()
 
     return (
         <>
@@ -42,18 +15,19 @@ export const Cart = () => {
                     ?
                     //Si la condición da verdad ==> el carrito está vacío
                     <>
-                        <h2>No hay productos en el carrito</h2>
-                        <Link className='nav-link' to={"/"}> <button className='btn btn-primary'>Continuar comprando</button></Link>
+                        <h2 className='text-center m-5 bg-gradient'>No hay productos en el carrito</h2>
+                        <Link className='nav-link text-center' to={"/"}> <button className='btn btn-primary w-50 m-5'>Continuar comprando</button></Link>
                     </>
                     :
-                    <div className='container cartContainer'>
+                    <div className='container cartContainer row'>
                         <ItemList totalLibros={carrito} plantilla="itemCart" />
-
-                        <div className="divButtons">
-                            <p>Resumen de la compra: Precio total</p>
-                            <button className='btn btn-danger' onClick={() => console.log("asd")}>Vaciar Carrito</button>
-                            <Link className="nav-link" to={"/"}><button className="btn btn-outline-success">Continuar comprando</button></Link>
-                            <Link className="nav-link" to={"/checkout"}><button className="btn btn-dark">Finalizar Compra</button></Link>
+                        <p className='resumen'>Resumen de la compra: ${totalPrice().toFixed(2)}</p>
+                        <div className="divButtons justify-content-between">
+                            
+                            <button className='btn btn-danger my-2' onClick={() => {emptyCart(true)}}>Vaciar Carrito</button>
+                            <Link className="nav-link my-2 " to={"/checkout"}><button className="btn btn-dark btnFinalizar">Finalizar Compra</button></Link>
+                            <Link className="nav-link" to={"/"}><button className="btn btn-danger my-2 btnContinuar">Continuar comprando</button></Link>
+                          
                         </div>
                     </div>
             }
